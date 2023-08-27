@@ -33,7 +33,7 @@ async def send(websocket):
             await websocket.send(output)
             await asyncio.sleep(2)
 
-start_server = websockets.serve(send, '100.89.141.12', 5678)
+start_server = websockets.serve(send, '0.0.0.0', 5678)
 
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
